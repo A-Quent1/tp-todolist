@@ -1,0 +1,79 @@
+<h1>Ma liste de tâche</h1>
+
+<div class="todos">
+
+  <div class="form-add-todo">
+    <input type="text" [(ngModel)]="toCreateTodo.text">
+    <button (click)="createTodo()">Enregistrer</button>
+  </div>
+
+<div  class="todos">
+
+  <h1>Tâche à faire</h1>
+  <div class="todonotdone" *ngFor="let todo of todos$ |async" *ngIf="!todo.done">
+
+      <h3
+        *ngIf="!todo.isEditable"
+        [class.done]="todo.done">
+        {{ todo.text }} 
+      </h3>
+      <input
+        *ngIf="todo.isEditable"
+        type="text"
+        [(ngModel)]="todo.text">
+
+      <div class="buttonsnotdone">
+        
+        <button
+          class="bt-check"
+          (click)="editTodo(todo)">
+          {{ todo.isEditable? '✔︎' : '✎' }}
+        </button>
+        <button
+          class="bt-check"
+          (click)="changeStateOfTodo(todo)">
+          {{ todo.done? '✖︎' : '✔︎' }}
+        </button>
+        <button 
+          class="bt-close" 
+          (click)="onDelete(todo.id)">
+          Supprimer
+        </button>
+
+      </div>
+    </div>
+
+  <h1>Tâche faite</h1>
+  <div class="tododone" *ngFor="let todo of todos$ |async" *ngIf="todo.done">
+
+      <h3
+        *ngIf="!todo.isEditable"
+        [class.done]="todo.done">
+        {{ todo.text }} 
+      </h3>
+      <input
+        *ngIf="todo.isEditable"
+        type="text"
+        [(ngModel)]="todo.text">
+
+      <div class="buttonsdone">
+        
+        <button
+          class="bt-check"
+          (click)="editTodo(todo)">
+          {{ todo.isEditable? '✔︎' : '✎' }}
+        </button>
+        <button
+          class="bt-check"
+          (click)="changeStateOfTodo(todo)">
+          {{ todo.done? '✖︎' : '✔︎' }}
+        </button>
+        <button 
+          class="bt-close" 
+          (click)="onDelete(todo.id)">
+          Supprimer
+        </button>
+
+      </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Quotidienne"
+    },
+    {
+      "id": 2,
+      "name": "Exceptionnelle"
+    }
+    ,
+    {
+      "id": 3,
+      "name": "Importante"
+    }
+  ]
+  ,
+  "todos": [
+    {
+      "id": "08c6a032-38bd-4cf7-986b-24ba7478c818",
+      "text": "Faire le ménage",
+      "done": false,
+      "isEditable": false,
+      "idUser": 1,
+      "nameCategory": "Importante"
+    },
+    {
+      "id": "b3be5c79-02b0-4b3b-8299-4746aee2ca1c",
+      "text": "Acheter une tomate",
+      "done": true,
+      "idUser": 2,
+      "nameCategory": "Quotidienne"
+    },
+    {
+      "id": "95dd2963-8910-4a36-aee8-5b266388ca24",
+      "text": "Courir 100 mètres",
+      "done": false,
+      "idUser": 2,
+      "nameCategory": "Importante"
+    },
+    {
+      "id": "3de4def8-fba3-4b03-9a62-7de31e9f7e31",
+      "text": "Faire du sport",
+      "done": true,
+      "idUser": 1,
+      "nameCategory": "Quotidienne"
+    },
+    {
+      "id": "ceaca077-5e6f-4307-b9c8-1d1f36fc1a31",
+      "text": "Connaître Angular",
+      "done": true,
+      "isEditable": false,
+      "idUser": 2,
+      "nameCategory": "Importante"
+    },
+    {
+      "text": "Essai",
+      "id": "tcghNJH",
+      "done": false,
+      "idUser": 3,
+      "nameCategory": "Exceptionnelle"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "nom": "DuPont",
+      "prenom": "Jean"
+    },
+    {
+      "id": 2,
+      "nom": "Marchand",
+      "prenom": "Hugo"
+    },
+    {
+      "id": 3,
+      "nom": "Pierre",
+      "prenom": "Daniel"
+    }
+  ]
+}
